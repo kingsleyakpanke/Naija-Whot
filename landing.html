@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Naija Whot — Play the Classic Nigerian Whot Online</title>
+  <meta name="description" content="Naija Whot — mobile-first, authentic Nigerian Whot card game. Play vs computer, learn rules, read articles & reviews. Play now!" />
+  <meta name="keywords" content="whot, naija whot, nigeria whot, card game, play whot, whot online" />
+
+  <!-- AdSense verification meta & script (your publisher id) -->
+  <meta name="google-adsense-account" content="ca-pub-1107311557690847" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1107311557690847"
+          crossorigin="anonymous"></script>
+
+  <!-- JSON-LD structured data for Organization + Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Naija Whot",
+    "url": "https://naiijawhot.com",
+    "logo": "https://naiijawhot.com/assets/logo.png",
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://naiijawhot.com/"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://naiijawhot.com/about.html"}
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------
+       Mobile-first clean styles
+       ------------------------- */
+    :root{
+      --bg1:#6c3e26; --bg2:#b97a56; --accent:#8b0f12; --card:#fffdf9; --muted:#6b6b6b;
+      --radius:14px; --max:1100px;
+      --container-padding:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;color:#111;background:linear-gradient(180deg,var(--bg1),var(--bg2));-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:var(--max);margin:18px auto;padding:0 var(--container-padding);}
+
+    /* Header / Nav */
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(180deg,#9b1220,#7b0b12);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.22)}
+    .nav{display:flex;gap:8px;align-items:center}
+    .nav a{background:rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:#fff;font-weight:600;font-size:14px}
+    .ctas{display:flex;gap:8px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:800;box-shadow:0 8px 20px rgba(0,0,0,0.28)}
+    .btn.secondary{background:rgba(255,255,255,0.95);color:var(--accent);font-weight:700}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(0,0,0,0.06));border-radius:12px;padding:18px;margin-top:8px;display:flex;gap:12px;align-items:center}
+    .hero-left{flex:1}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,0.06);padding:6px 8px;border-radius:999px;color:#fff;font-weight:700;font-size:13px;margin-bottom:12px}
+    h1{margin:0;color:#fff;font-size:24px;line-height:1.05}
+    p.lead{color:rgba(255,255,255,0.92);margin:10px 0 16px;max-width:680px}
+    .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+    .hero-visual{width:120px;height:120px;border-radius:12px;background:#fff display:block;overflow:hidden;flex-shrink:0;box-shadow:0 10px 40px rgba(0,0,0,0.35)}
+    .hero-visual img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Content grid */
+    .grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:14px}
+    @media(min-width:820px){ .grid{grid-template-columns:2fr 1fr} }
+
+    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 10px 30px rgba(2,8,6,0.12)}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .section-title h3{margin:0;font-size:18px;color:#3b2a22}
+
+    /* How to Play */
+    .how-list li{margin:10px 0}
+
+    /* Blog previews */
+    .posts{display:grid;grid-template-columns:1fr;gap:10px}
+    @media(min-width:720px){ .posts{grid-template-columns:1fr 1fr} }
+    .post{display:flex;gap:10px}
+    .post img{width:100px;height:68px;object-fit:cover;border-radius:8px}
+    .meta{font-size:12px;color:var(--muted)}
+
+    /* Reviews */
+    .reviews{display:flex;flex-direction:column;gap:10px}
+    .review{background:linear-gradient(180deg,#fff,#fffefc);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+
+    /* Footer */
+    footer{margin-top:18px;padding:18px 0;color:#fff;opacity:0.95}
+    .footer-grid{display:grid;grid-template-columns:1fr;gap:10px}
+    @media(min-width:720px){ .footer-grid{grid-template-columns:2fr 1fr 1fr} }
+    .small{font-size:13px;color:rgba(255,255,255,0.85)}
+    .muted{color:rgba(255,255,255,0.72)}
+
+    /* utility */
+    .muted-2{color:var(--muted)}
+    .pill{background:rgba(139,15,18,0.12);padding:6px 10px;border-radius:999px;color:#fff;font-weight:700}
+
+    /* make sure links in cards are visible */
+    .card a{color:var(--accent);font-weight:700}
+
+  </style>
+</head>
+<body>
+  <div class="wrap" role="document">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="assets/logo.png" alt="Naija Whot logo" style="width:44px;height:44px;border-radius:8px;object-fit:cover">
+        </div>
+        <div>
+          <div style="color:#fff;font-weight:800;font-size:18px">Naija Whot</div>
+          <div style="color:rgba(255,255,255,0.9);font-size:12px">Play the classic Nigerian Whot online</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <div class="nav-links" style="display:flex;gap:8px;align-items:center">
+          <a href="game.html" class="btn" aria-label="Play Naija Whot">Play game</a>
+          <a href="about.html">About</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <span class="eyebrow">Authentic • Mobile-first • Nigeria</span>
+        <h1 id="hero-title">Naija Whot — the authentic Nigerian Whot in your browser</h1>
+        <p class="lead">Play the classic Naija Whot card game with faithful rules, elegant UI and a responsive mobile-first experience. Play offline vs CPU, learn how to play, and read articles and reviews about Whot culture in Nigeria.</p>
+
+        <div class="hero-cta">
+          <a href="game.html" class="btn" title="Play Naija Whot">▶ Play Now</a>
+          <a href="#howto" class="btn secondary">How to play</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true" title="Naija Whot preview">
+        <img src="assets/hero.jpg" alt="Naija Whot game preview">
+      </div>
+    </section>
+
+    <!-- Main grid -->
+    <div class="grid" role="main" aria-label="Main content">
+
+      <!-- Left column -->
+      <div>
+        <!-- About / story -->
+        <div class="card" id="story">
+          <div class="section-title">
+            <h3>How Naija Whot was founded</h3>
+            <span class="pill">Since 2025</span>
+          </div>
+          <p class="muted-2">Naija Whot started as a passion project to preserve and share the joy of the classic Nigerian Whot card game. Built by a Nigerian developer who grew up playing Whot on neighborhood evenings and school breaks, the project began as a lightweight web experiment and evolved into a full mobile-first game with rules tuned to local house play.</p>
+
+          <h4 style="margin-top:12px">Our mission</h4>
+          <p class="muted-2">Make Whot accessible to anyone with a phone — no installs, no accounts. A faithful rule set, elegant visuals, and offline-friendly gameplay are the pillars of Naija Whot.</p>
+        </div>
+
+        <!-- How to play -->
+        <div class="card" id="howto" style="margin-top:12px">
+          <div class="section-title">
+            <h3>How to play</h3>
+            <span class="muted small">Quick rules</span>
+          </div>
+
+          <ol class="how-list">
+            <li><strong>Match a shape or number:</strong> Play a card that matches the top card's shape or number.</li>
+            <li><strong>WHOT (20):</strong> Play a WHOT to choose a shape or number the next players must follow.</li>
+            <li><strong>Pick rules (Nigeria):</strong> 2 = Pick 2 (defended only by 2), 5 = Pick 3 (defended only by 5). These stacks are separate.</li>
+            <li><strong>Hold On & Suspension:</strong> 1 = Hold On (play again); 8 = Suspension (skip next player).</li>
+            <li><strong>General Market:</strong> 14 causes other players to draw (standard house rules may vary).</li>
+          </ol>
+
+          <p style="margin-top:10px" class="muted-2">Tip: In our game you can choose difficulty (Easy / Medium / Hard) and the AI will play differently based on the level chosen.</p>
+        </div>
+
+        <!-- Blog posts -->
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">
+            <h3>Latest articles & blog</h3>
+            <a href="blog.html" style="font-size:13px;color:var(--muted)">See all →</a>
+          </div>
+
+          <div class="posts">
+            <article class="post">
+              <img src="assets/post1.jpg" alt="Post 1">
+              <div>
+                <div class="meta">Oct 18, 2025 • article</div>
+                <a href="blog/post-naija-whot-history.html">The history of Whot in Nigeria — from street corners to phones</a>
+                <div class="muted-2" style="margin-top:6px;font-size:13px">A short exploration of Whot’s origins and local variations across Nigerian regions.</div>
+              </div>
+            </article>
+
+            <article class="post">
+              <img src="assets/post2.jpg" alt="Post 2">
+              <div>
+                <div class="meta">Oct 10, 2025 • guide</div>
+                <a href="blog/post-how-to-tactic.html">Strategies: When to hold, when to press — intermediate Whot tactics</a>
+                <div class="muted-2" style="margin-top:6px;font-size:13px">Improve your win-rate with practical tips about stacking and WHOT plays.</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Articles / Feature -->
+        <div class="card" style="margin-top:12px">
+          <div class="section-title"><h3>Featured article</h3><div class="muted small">Editor’s pick</div></div>
+          <h4 style="margin:0 0 8px 0">Why Whot is still loved — community & culture</h4>
+          <p class="muted-2">Whot is simple but social — it’s a game of quick thinking and community banter. Our featured piece dives into how Whot shaped local gatherings and how the rules differ from town to town.</p>
+          <a href="blog/featured-whot-culture.html">Read the full article →</a>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <aside>
+        <div class="card">
+          <div class="section-title">
+            <h3>Developer</h3>
+            <span class="muted small">Creator</span>
+          </div>
+          <img src="assets/dev.jpg" alt="Developer" style="width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px">
+          <h4 style="margin:0 0 6px 0">Kingsley Akpanke</h4>
+          <p class="muted-2" style="font-size:14px">Kingsley is a front-end developer passionate about Nigerian game design and lightweight web apps. Built Naija Whot to preserve a cultural pastime and make it playable on all phones.</p>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <a href="mailto:support@naiijawhot.com" class="nav-item" style="background:rgba(0,0,0,0.04);padding:10px;border-radius:8px">Contact</a>
+            <a href="https://github.com/kingsleyakpanke/Naija-Whot" target="_blank" class="nav-item" style="background:rgba(0,0,0,0.04);padding:10px;border-radius:8px">Repo</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title"><h3>Reviews</h3><div class="muted small">Players love it</div></div>
+          <div class="reviews">
+            <div class="review">
+              <div style="font-weight:700">Ajayi • Lagos</div>
+              <div class="muted-2" style="font-size:14px">“Feels exactly like the street Whot we used to play — plus the AI is challenging!”</div>
+            </div>
+            <div class="review">
+              <div style="font-weight:700">Chimamanda • Abuja</div>
+              <div class="muted-2" style="font-size:14px">“Nice UI. Works well on my phone. Simple and fun.”</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title"><h3>Quick links</h3><div class="muted small">Handy</div></div>
+          <ul style="padding-left:14px;margin:0" class="muted-2">
+            <li><a href="game.html">Play Now</a></li>
+            <li><a href="about.html">About Naija Whot</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <img src="assets/logo.png" alt="Naija Whot logo" style="width:48px;height:48px;border-radius:8px;object-fit:cover">
+            <div>
+              <div style="font-weight:800;color:#fff">Naija Whot</div>
+              <div class="small">Authentic Nigerian Whot — play online</div>
+            </div>
+          </div>
+
+          <p class="small" style="margin-top:10px">Naija Whot is built with love for the community. For support contact <a href="mailto:support@naiijawhot.com">support@naiijawhot.com</a></p>
+        </div>
+
+        <div>
+          <div style="font-weight:700;margin-bottom:8px">Company</div>
+          <ul style="list-style:none;padding:0;margin:0" class="muted-2">
+            <li><a href="about.html">About</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-weight:700;margin-bottom:8px">Legal</div>
+          <ul style="list-style:none;padding:0;margin:0" class="muted-2">
+            <li><a href="/ads.txt">ads.txt</a></li>
+            <li><a href="/sitemap.xml">sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;color:rgba(255,255,255,0.72);font-size:13px">© <span id="year"></span> Naija Whot — All rights reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accessibility: allow keyboard focus on hero CTAs
+    document.querySelectorAll('.btn').forEach(b => b.setAttribute('tabindex', '0'));
+  </script>
+</body>
+</html>
